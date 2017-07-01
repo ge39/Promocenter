@@ -1,0 +1,49 @@
+
+
+			{{--<thead>
+				<tr>
+					<th>Empresa</th>
+					<th>Nome Produto</th>
+					<th>Descricao</th>
+					<th>Valor</th>
+					<th>Observação</th>
+					<th>Categoria</th>
+					<th>Inicio Promo</th>
+					<th>Fim Promo</th>
+					<th>Logo</th>
+				</tr>
+			</thead>
+			<tbody>
+		
+				@forEach($products as $product)
+				<tr>
+					<td>{{ $product->Empresa }}</td>
+					<td>{{ $product->NomeProd }}</td>
+					<td>{{ $product->Descricao }}</td>
+					<td>
+						<span class="currency">R$</span>
+						{{ number_format($product->Valor, 2, ',', '.') }}
+					</td>
+					<td>{{ $product->Obs }}</td>
+					<td>{{ $product->Category }}</td>
+					<td>{{ date('d/m/Y', strtotime($product->DtInicio))}}</td>
+					<td>{{ date('d/m/Y', strtotime($product->DtFim)) }}</td>
+					<td><img src="{{ $product->Foto }}"  width="70"></td>
+				</tr>
+				@endforEach-
+		
+			</tbody>-}}	
+				
+		</table>
+
+
+
+
+background-color: #FFFAF0;
+	padding-top: 20px;
+	padding-left: 5px;
+	border-color: #FAF0E6;
+	height: 600px;
+	column-count: 3;
+	column-width: 200px; 
+	text-align: center;
